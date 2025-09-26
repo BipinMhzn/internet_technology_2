@@ -1,0 +1,13 @@
+<html>
+<body>
+<form action="post/register.php" method="post">
+    <label>Username</label>
+    <input type="text" name="username">
+    <br>
+    <label>Password</label>
+    <input type="password" name="password">
+    <br>
+    <button type="submit">Register</button>
+</form>
+</body>
+</html>
