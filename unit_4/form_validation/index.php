@@ -4,6 +4,7 @@ $name = '';
 $email = '';
 $password = '';
 $gender = '';
+$age = '';
 $message = '';
 $country = '';
 $skills = [];
