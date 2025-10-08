@@ -20,7 +20,7 @@ try {
 
     $a = 10;
     $b = 2;
-    $b = 0;
+//    $b = 0;
 //    $b = "abc";
 
     echo "Trying to divide $a by $b...<br><br>";
