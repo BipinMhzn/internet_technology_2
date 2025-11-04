@@ -54,6 +54,10 @@ echo "<h3>strtotime()</h3>";
 $timestamp2 = strtotime("next Monday");
 echo "Next Monday timestamp: " . $timestamp2 . "<br>";
 echo "Formatted date: " . date("Y-m-d", $timestamp2) . "<br>";
+echo date("Y-m-d", strtotime("tomorrow")) . "<br>";
+echo date("Y-m-d", strtotime("+1 week")) . "<br>";
+echo date("Y-m-d", strtotime("+1 month")) . "<br>";
+echo date("Y-m-d", strtotime("-1 year")) . "<br>";
 
 /* ===========================
    7. date("l")
