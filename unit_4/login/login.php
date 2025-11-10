@@ -1,6 +1,6 @@
 <html>
     <body>
-        <form action="login/welcome.php" method="post">
+        <form action="welcome.php" method="post">
             <label for="name">Name: </label>
             <input type="text" name="name" id="name" required>
             <br>
