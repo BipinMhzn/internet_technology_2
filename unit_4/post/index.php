@@ -1,6 +1,6 @@
 <html>
 <body>
-<form action="post/register.php" method="post">
+<form action="register.php" method="post">
     <label>Username</label>
     <input type="text" name="username">
     <br>
