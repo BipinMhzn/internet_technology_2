@@ -24,8 +24,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 
         // Sender and recipient
-        $mail->setFrom('teacher@example.com', 'Teacher');
-        $mail->addAddress('student@example.com', 'Student');
+        $mail->setFrom('no-reply@uniglobe.com', 'Uniglobe College');
+        $mail->addAddress('admin@uniglobe.com', 'Uniglobe Admin');
 
         // Email content
         $mail->isHTML(true);
