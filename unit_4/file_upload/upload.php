@@ -1,5 +1,5 @@
 <?php
-if (isset($_POST['submit'])) {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // File info from $_FILES
     $fileName = $_FILES['myfile']['name'];
     $fileTmp  = $_FILES['myfile']['tmp_name'];
