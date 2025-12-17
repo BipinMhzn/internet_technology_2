@@ -1,16 +1,13 @@
 <?php
 session_start();
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
     $password = $_POST["password"];
-
     // Hardcoded user credentials (for demo only)
     $users = [
         "admin" => ["password" => "admin123", "role" => "admin"],
         "student" => ["password" => "student123", "role" => "student"]
     ];
-
     // Check if username exists and password matches
     if (isset($users[$username]) && $users[$username]["password"] === $password) {
         // Store user details in session
@@ -25,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         exit;
     } else {
-        echo "<p style='color:red;'>Invalid username or password!</p>";
+        echo "<p>Invalid username or password!</p>";
     }
 }
 ?>
