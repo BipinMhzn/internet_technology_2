@@ -4,6 +4,8 @@ include "db_connect.php";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $password = $_POST["password"];
+    // Hash the password
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
     // Check if email already exists
     $checkQuery = "SELECT * FROM users WHERE email='$email'";
     $checkResult = mysqli_query($conn, $checkQuery);
@@ -12,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<p>Email already registered!</p>";
     } else {
         $insertQuery = "INSERT INTO users (email, password)
-                        VALUES ('$email', '$password')";
+                        VALUES ('$email', '$hashedPassword')";
         if (mysqli_query($conn, $insertQuery)) {
             echo "<p>Registration successful!</p>";
         } else {
@@ -32,10 +34,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <h2>Register New User</h2>
 
 <form method="post" action="">
-    Email:
+    <label for="email">Email</label>
     <input type="email" name="email" required><br><br>
 
-    Password:
+    <label for="password">Password</label>
     <input type="password" name="password" required><br><br>
 
     <input type="submit" value="Register">
