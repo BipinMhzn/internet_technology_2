@@ -2,10 +2,8 @@
 include "db_connect.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
     $email = $_POST["email"];
     $password = $_POST["password"];
-
     // Check if email already exists
     $checkQuery = "SELECT * FROM users WHERE email='$email'";
     $checkResult = mysqli_query($conn, $checkQuery);
@@ -15,10 +13,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $insertQuery = "INSERT INTO users (email, password)
                         VALUES ('$email', '$password')";
-
         if (mysqli_query($conn, $insertQuery)) {
             echo "<p>Registration successful!</p>";
-            echo "<a href='login.php'>Go to Login</a>";
         } else {
             echo "<p>Error during registration.</p>";
         }
@@ -33,9 +29,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
 
-<h2>Register</h2>
+<h2>Register New User</h2>
 
-<form method="post">
+<form method="post" action="">
     Email:
     <input type="email" name="email" required><br><br>
 
@@ -44,6 +40,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <input type="submit" value="Register">
 </form>
+<br>
+Already user exists? <a href='login.php'>Login here</a>
 
 </body>
 </html>

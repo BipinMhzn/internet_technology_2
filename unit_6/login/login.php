@@ -2,6 +2,11 @@
 session_start();
 include "db_connect.php";
 
+if (isset($_SESSION["email"])) {
+    header("Location: dashboard.php");
+    exit;
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $email = $_POST["email"];
@@ -30,10 +35,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <h2>Login</h2>
 
 <form method="post">
-    Email:
+    <label for="email">Email</label>
     <input type="email" name="email" required><br><br>
-
-    Password:
+    <label for="password">Password</label>
     <input type="password" name="password" required><br><br>
 
     <input type="submit" value="Login">
