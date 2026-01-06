@@ -8,3 +8,5 @@ CREATE TABLE record (
                         email VARCHAR(100),
                         phone VARCHAR(15)
 );
+
+INSERT INTO record()
