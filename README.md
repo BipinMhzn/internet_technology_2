@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-> **Note:** Each unit directory contains detailed notes (`unit_X_notes.md`) and practical code examples demonstrating the concepts covered.
+> **Note:** Detailed notes are in the [`notes/`](./notes) directory and practice questions are in the [`questions/`](./questions) directory. Each unit directory contains practical code examples demonstrating the concepts covered.
 
 ### [Unit 1: Introduction to PHP](./unit_1) (4 Hours)
 - Understanding Server-Side Scripting and PHP Programming
@@ -71,8 +71,9 @@ Before getting started, please ensure the following are installed and running on
 
 The repository is organized as follows:
 
+- **`notes/`**: Comprehensive notes for all units (`unit_1_notes.md` to `unit_8_notes.md`)
+- **`questions/`**: Practice questions for all units (`unit_1_questions.md` to `unit_8_questions.md`)
 - **`unit_1/` to `unit_8/`**: Each unit directory contains:
-  - `unit_X_notes.md` - Comprehensive notes covering all topics in the unit
   - PHP code examples demonstrating concepts (e.g., `HelloWorld.php`, `array_basics.php`, `form_handling/`, etc.)
   - Practical exercises and implementations
 
